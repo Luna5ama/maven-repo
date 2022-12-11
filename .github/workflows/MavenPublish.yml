@@ -28,12 +28,13 @@ jobs:
                     git fetch
                     git switch ${{ inputs.target-branch }}
                     git pull
-
-            -   name: Copy to maven local
-                run: |
                     mkdir -p ~/.m2/repository
-                    /bin/cp -R ~/${{ inputs.target-repo }}/* ~/.m2/repository
-                    cd $GITHUB_WORKSPACE
+                    /bin/cp -R ./* ~/.m2/repository
+                    PREVS=
+                    for FILE in $(find . -not -type d -name "maven-metadata*.xml"); do
+                        PREVS="$PREVS\n$(grep -Po -m 1 "(?<=<groupId>)(.+)(?=</groupId>)" $FILE | sed "s/\./\//g")/$(grep -Po -m 1 "(?<=<artifactId>)(.+)(?=</artifactId>)" $FILE)"
+                    done
+                    echo prevs=$(echo -e ${PREVS:2} | uniq) >> $GITHUB_ENV
 
             -   name: Checkout current
                 uses: actions/checkout@v3
@@ -60,16 +61,29 @@ jobs:
 
             -   name: Commit and push
                 run: |
+                    cd $GITHUB_WORKSPACE
+                    NEW_DIRS=
+                    for FILE in $(find . -not -type d -name "pom-default.xml"); do
+                        NEW_DIRS="$NEW_DIRS\n$(grep -Po -m 1 "(?<=<groupId>)(.+)(?=</groupId>)" $FILE | sed "s/\./\//g")/$(grep -Po -m 1 "(?<=<artifactId>)(.+)(?=</artifactId>)" $FILE)"
+                    done
+                    NEW_DIRS=$(echo -e ${NEW_DIRS:2} | uniq)
                     cd ~/${{ inputs.target-repo }}
                     git switch --orphan temp
-                    git rm -rf .
-                    for POM_FILE in $GITHUB_WORKSPACE/build/publications/*/pom-default.xml; do
-                        PKG=$(grep -Po -m 1 "(?<=<groupId>)(.+)(?=</groupId>)" POM_FILE | sed "s/\./\//g") 
-                        mkdir -p ./$PKG
-                        cp -r ~/.m2/repository/$PKG ./$PKG
+                    rm -rf $(git ls-files -o)
+                    echo "Copying previous maven publications"
+                    for PREV_DIR in ${{ env.prevs }}; do
+                        echo -e "\t$PREV_DIR"
+                        mkdir -p ./$PREV_DIR
+                        cp -r ~/.m2/repository/$PREV_DIR/* ./$PREV_DIR
+                    done
+                    echo "Copying new maven publications"
+                    for NEW_DIR in $NEW_DIRS; do
+                        echo -e "\t$NEW_DIR"
+                        mkdir -p ./$NEW_DIR
+                        cp -r ~/.m2/repository/$NEW_DIR/* ./$NEW_DIR
                     done
                     git add .
                     git config user.name "GitHub Actions Bot"
                     git config user.email "<>"
                     git commit -a -m "Updated maven repo"
-                    git push --force temp:${{ inputs.target-repo }}
+                    git push -f https://${{ secrets.token }}:${{ secrets.token }}@github.com/${{ inputs.target-owner }}/${{ inputs.target-repo }}.git temp:${{ inputs.target-branch }}
