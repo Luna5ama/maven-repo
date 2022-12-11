@@ -20,16 +20,11 @@ jobs:
     publish:
         runs-on: ubuntu-latest
         steps:
-            -   name: Setup variables
-                run: |
-                    MAVEN_LOCAL=~/.m2/repository
-                    MAVEN_REPO=~/${{ inputs.target-repo }}
-
             -   name: Checkout previous maven repo
                 run: |
                     cd ~
                     git clone https://github.com/${{ inputs.target-owner }}/${{ inputs.target-repo }}.git
-                    cd $MAVEN_REPO
+                    cd ~/${{ inputs.target-repo }}
                     git fetch
                     git switch ${{ inputs.target-branch }}
                     git pull
@@ -37,7 +32,7 @@ jobs:
             -   name: Copy to maven local
                 run: |
                     mkdir -p ~/.m2/repository
-                    /bin/cp -R $MAVEN_REPO/* $MAVEN_LOCAL
+                    /bin/cp -R ~/${{ inputs.target-repo }}/* ~/.m2/repository
                     cd $GITHUB_WORKSPACE
 
             -   name: Checkout current
@@ -65,13 +60,13 @@ jobs:
 
             -   name: Commit and push
                 run: |
-                    cd $MAVEN_REPO
+                    cd ~/${{ inputs.target-repo }}
                     git switch --orphan temp
                     git rm -rf .
                     for POM_FILE in $GITHUB_WORKSPACE/build/publications/*/pom-default.xml; do
                         PKG=$(grep -Po -m 1 "(?<=<groupId>)(.+)(?=</groupId>)" POM_FILE | sed "s/\./\//g") 
                         mkdir -p ./$PKG
-                        cp -r $MAVEN_LOCAL/$PKG ./$PKG
+                        cp -r ~/.m2/repository/$PKG ./$PKG
                     done
                     git add .
                     git config user.name "GitHub Actions Bot"
