@@ -1,0 +1,80 @@
+name: MavenPublish
+
+on:
+    workflow_call:
+        inputs:
+            target-owner:
+                required: true
+                type: string
+            target-repo:
+                required: true
+                type: string
+            target-branch:
+                required: true
+                type: string
+        secrets:
+            token:
+                required: true
+
+jobs:
+    publish:
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Setup variables
+                run: |
+                    MAVEN_LOCAL=~/.m2/repository
+                    MAVEN_REPO=~/${{ inputs.target-repo }}
+
+            -   name: Checkout previous maven repo
+                run: |
+                    cd ~
+                    git clone https://github.com/${{ inputs.target-owner }}/${{ inputs.target-repo }}.git
+                    cd $MAVEN_REPO
+                    git fetch
+                    git switch ${{ inputs.target-branch }}
+                    git pull
+
+            -   name: Copy to maven local
+                run: |
+                    mkdir -p ~/.m2/repository
+                    /bin/cp -R $MAVEN_REPO/* $MAVEN_LOCAL
+                    cd $GITHUB_WORKSPACE
+
+            -   name: Checkout current
+                uses: actions/checkout@v3
+                with:
+                    token: ${{ secrets.token }}
+
+            -   name: Set up JDK
+                uses: actions/setup-java@v1
+                with:
+                    java-version: 17
+
+            -   name: Gradle cache
+                uses: actions/cache@v2
+                with:
+                    path: |
+                        ~/.gradle/caches
+                        ~/.gradle/wrapper
+                    key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
+                    restore-keys: |
+                        ${{ runner.os }}-gradle-
+
+            -   name: Gradle publish to local
+                run: ./gradlew --build-cache publishToMavenLocal
+
+            -   name: Commit and push
+                run: |
+                    cd $MAVEN_REPO
+                    git switch --orphan temp
+                    git rm -rf .
+                    for POM_FILE in $GITHUB_WORKSPACE/build/publications/*/pom-default.xml; do
+                        PKG=$(grep -Po -m 1 "(?<=<groupId>)(.+)(?=</groupId>)" POM_FILE | sed "s/\./\//g") 
+                        mkdir -p ./$PKG
+                        cp -r $MAVEN_LOCAL/$PKG ./$PKG
+                    done
+                    git add .
+                    git config user.name "GitHub Actions Bot"
+                    git config user.email "<>"
+                    git commit -a -m "Updated maven repo"
+                    git push --force temp:${{ inputs.target-repo }}
