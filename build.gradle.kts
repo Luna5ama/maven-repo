@@ -15,7 +15,7 @@ publishing {
         maven {
             name = "temp"
             val tempMavenPath = System.getenv("mvn_temp") ?: "${project.buildDir}/tmp/mvn_temp"
-            url = uri("file://$tempMavenPath")
+            url = File(tempMavenPath).toURI()
         }
     }
 }
