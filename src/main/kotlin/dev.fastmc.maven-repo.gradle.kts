@@ -6,7 +6,7 @@ configure<PublishingExtension> {
     repositories {
         maven {
             name = "temp"
-            val tempMavenPath = System.getenv("mvn_temp") ?: "${project.buildDir}/tmp/maven-repo"
+            val tempMavenPath = System.getenv("mvn_temp") ?: "${project.buildDir}/tmp/mvn_temp"
             url = uri("file://$tempMavenPath")
         }
     }
@@ -14,6 +14,8 @@ configure<PublishingExtension> {
 
 afterEvaluate {
     if (System.getenv("CI") == "true") {
-        File(buildDir, "version_info.txt").writeText("${rootProject.group}:${rootProject.name}:${rootProject.version}")
+        val dir = File(buildDir, "tmp/maven-repo")
+        dir.mkdirs()
+        File(dir, "version_info.txt").writeText("${rootProject.group}:${rootProject.name}:${rootProject.version}")
     }
 }
