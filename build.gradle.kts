@@ -25,8 +25,12 @@ publishing {
 afterEvaluate {
     if (System.getenv("CI") == "true") {
         println("Writing version info")
-        val dir = File(buildDir, "tmp/maven-repo")
+        val dir = File(projectDir,"build/tmp/maven-repo")
         dir.mkdirs()
-        File(dir, "version_info.txt").writeText("${rootProject.group}:${rootProject.name}:${rootProject.version}")
+        val file = File(dir, "version_info.txt")
+        if (!file.exists()) {
+            file.createNewFile()
+        }
+        file.writeText("${rootProject.group}:${rootProject.name}:${rootProject.version}")
     }
 }
