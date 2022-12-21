@@ -5,7 +5,7 @@ on:
 
 jobs:
     call-workflow:
-        uses: FastMinecraft/maven-repo/.github/workflows/MavenPublishNew.yml@workflows
+        uses: FastMinecraft/maven-repo/.github/workflows/MavenPublishNew.yml@main
         with:
             target-owner: FastMinecraft
             target-repo: maven-repo
