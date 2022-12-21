@@ -1,0 +1,63 @@
+name: MavenPublish
+
+on:
+    workflow_call:
+        inputs:
+            target-owner:
+                required: true
+                type: string
+            target-repo:
+                required: true
+                type: string
+            target-branch:
+                required: true
+                type: string
+        secrets:
+            token:
+                required: true
+
+jobs:
+    publish:
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Checkout previous maven repo
+                run: |
+                    cd ~
+                    git clone https://github.com/${{ inputs.target-owner }}/${{ inputs.target-repo }}.git
+                    cd ~/${{ inputs.target-repo }}
+                    git fetch
+                    git switch ${{ inputs.target-branch }}
+
+            -   name: Checkout current
+                uses: actions/checkout@v3
+                with:
+                    token: ${{ secrets.token }}
+
+            -   name: Set up JDK
+                uses: actions/setup-java@v1
+                with:
+                    java-version: 17
+
+            -   name: Gradle cache
+                uses: actions/cache@v2
+                with:
+                    path: |
+                        ~/.gradle/caches
+                        ~/.gradle/wrapper
+                    key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
+                    restore-keys: |
+                        ${{ runner.os }}-gradle-
+
+            -   name: Gradle publish to temp
+                run: ./gradlew --build-cache publishAllPublicationsToTempRepository
+                env:
+                    mvn_temp: ~/${{ inputs.target-repo }}
+
+            -   name: Commit and push
+                run: |
+                    cd ~/${{ inputs.target-repo }}
+                    git add .
+                    git config user.name "GitHub Actions Bot"
+                    git config user.email "<>"
+                    git commit -a -m "Updated $(cat ./build/version_info.txt)"
+                    git push https://${{ secrets.token }}:${{ secrets.token }}@github.com/${{ inputs.target-owner }}/${{ inputs.target-repo }}.git ${{ inputs.target-branch }}
