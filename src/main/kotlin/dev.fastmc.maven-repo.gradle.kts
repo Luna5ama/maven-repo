@@ -15,7 +15,7 @@ configure<PublishingExtension> {
 
 afterEvaluate {
     if (System.getenv("CI") == "true") {
-        val dir = File(projectDir,"build/tmp/maven-repo")
+        val dir = File(rootProject.projectDir,"build/tmp/maven-repo")
         dir.mkdirs()
         val file = File(dir, "version_info.txt")
         if (!file.exists()) {

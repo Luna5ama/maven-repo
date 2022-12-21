@@ -60,5 +60,5 @@ jobs:
                     git add .
                     git config user.name "GitHub Actions Bot"
                     git config user.email "<>"
-                    git commit -a -m "Updated $(cat ./build/tmp/maven-repo/version_info.txt)"
+                    git commit -a -m "Updated $(cat $GITHUB_WORKSPACE/build/tmp/maven-repo/version_info.txt)"
                     git push https://${{ secrets.token }}:${{ secrets.token }}@github.com/${{ inputs.target-owner }}/${{ inputs.target-repo }}.git ${{ inputs.target-branch }}
