@@ -27,6 +27,7 @@ jobs:
                     cd ~/${{ inputs.target-repo }}
                     git fetch
                     git switch ${{ inputs.target-branch }}
+                    echo mvn_temp=$(pwd) >> $GITHUB_ENV
 
             -   name: Checkout current
                 uses: actions/checkout@v3
@@ -51,11 +52,11 @@ jobs:
             -   name: Gradle publish to temp
                 run: ./gradlew --build-cache publishAllPublicationsToTempRepository
                 env:
-                    mvn_temp: ~/${{ inputs.target-repo }}
+                    mvn_temp: ${{ env.mvn_temp }}
 
             -   name: Commit and push
                 run: |
-                    cd ~/${{ inputs.target-repo }}
+                    cd ${{ env.mvn_temp }}
                     git add .
                     git config user.name "GitHub Actions Bot"
                     git config user.email "<>"
