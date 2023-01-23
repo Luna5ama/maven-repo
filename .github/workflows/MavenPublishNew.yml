@@ -50,7 +50,7 @@ jobs:
                         ${{ runner.os }}-gradle-
 
             -   name: Gradle publish to temp
-                run: ./gradlew --build-cache build publishAllPublicationsToTempRepository
+                run: ./gradlew --build-cache publishAllPublicationsToTempRepository
                 env:
                     mvn_temp: ${{ env.mvn_temp }}
 
