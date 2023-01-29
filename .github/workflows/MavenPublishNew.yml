@@ -39,20 +39,12 @@ jobs:
                 with:
                     java-version: 17
 
-            -   name: Gradle cache
-                uses: actions/cache@v2
-                with:
-                    path: |
-                        ~/.gradle/caches
-                        ~/.gradle/wrapper
-                    key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
-                    restore-keys: |
-                        ${{ runner.os }}-gradle-
-
-            -   name: Gradle publish to temp
-                run: ./gradlew --build-cache publishAllPublicationsToTempRepository
+            -   uses: burrunan/gradle-cache-action@v1
+                name: Build PROJECT_NAME
                 env:
                     mvn_temp: ${{ env.mvn_temp }}
+                with:
+                    arguments: --build-cache publishAllPublicationsToTempRepository
 
             -   name: Commit and push
                 run: |
