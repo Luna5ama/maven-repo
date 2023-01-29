@@ -40,7 +40,7 @@ jobs:
                     java-version: 17
 
             -   uses: burrunan/gradle-cache-action@v1
-                name: Build PROJECT_NAME
+                name: Gradle publish to temp
                 env:
                     mvn_temp: ${{ env.mvn_temp }}
                 with:
