@@ -1,0 +1,144 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "dev.luna5ama",
+    "module": "kmogus-struct-plugin",
+    "version": "1.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.1.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.8.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kmogus-struct-plugin-1.0-SNAPSHOT.jar",
+          "url": "kmogus-struct-plugin-1.0-SNAPSHOT.jar",
+          "size": 31337,
+          "sha512": "31fbb89edf7b185f353e748cde2c58fd88ed6571203f75f635ddf69beff0a5f0cc6f4a073bcc1b990a43e9277a1740ab0c8587e708d03bef6d1506fb028aa5a3",
+          "sha256": "23ebaac0f3c0d2501ada3dc1811a7ac38ed3908cd25ab516e6429f3a9ea5886a",
+          "sha1": "806f806e468b3635ce2187a813f476bd41036780",
+          "md5": "1d11f178c6a9bceb2f590987c19b072c"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-gradle-plugin",
+          "version": {
+            "requires": "1.8.21"
+          }
+        },
+        {
+          "group": "com.google.devtools.ksp",
+          "module": "com.google.devtools.ksp.gradle.plugin",
+          "version": {
+            "requires": "1.8.21-1.0.11"
+          }
+        },
+        {
+          "group": "com.google.devtools.ksp",
+          "module": "symbol-processing-api",
+          "version": {
+            "requires": "1.8.20-1.0.10"
+          }
+        },
+        {
+          "group": "com.squareup",
+          "module": "kotlinpoet",
+          "version": {
+            "requires": "1.14.2"
+          }
+        },
+        {
+          "group": "com.squareup",
+          "module": "kotlinpoet-ksp",
+          "version": {
+            "requires": "1.14.2"
+          }
+        },
+        {
+          "group": "dev.luna5ama",
+          "module": "kmogus-struct-api",
+          "version": {
+            "requires": "1.0-SNAPSHOT"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.8.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kmogus-struct-plugin-1.0-SNAPSHOT.jar",
+          "url": "kmogus-struct-plugin-1.0-SNAPSHOT.jar",
+          "size": 31337,
+          "sha512": "31fbb89edf7b185f353e748cde2c58fd88ed6571203f75f635ddf69beff0a5f0cc6f4a073bcc1b990a43e9277a1740ab0c8587e708d03bef6d1506fb028aa5a3",
+          "sha256": "23ebaac0f3c0d2501ada3dc1811a7ac38ed3908cd25ab516e6429f3a9ea5886a",
+          "sha1": "806f806e468b3635ce2187a813f476bd41036780",
+          "md5": "1d11f178c6a9bceb2f590987c19b072c"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "kmogus-struct-plugin-1.0-SNAPSHOT-sources.jar",
+          "url": "kmogus-struct-plugin-1.0-SNAPSHOT-sources.jar",
+          "size": 5543,
+          "sha512": "6ed6047167a670a49e0fbd26c2c2229bd061bb77f90bce28ba570a3f68415f228784328c8afe2dca88dfac5d1d7c38ec79c3092727029b143fb0a9a74463e54b",
+          "sha256": "a33f76150b7dafec2cbe08eaa32c8d9429f27df3ce876f79428fd17554b807b2",
+          "sha1": "8f88e102245a278f42e386aca789bc19102fee71",
+          "md5": "55f03a295b15a6e6e89a1ada40c56a70"
+        }
+      ]
+    }
+  ]
+}

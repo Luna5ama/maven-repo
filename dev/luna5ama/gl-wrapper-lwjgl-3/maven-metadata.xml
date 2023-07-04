@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>dev.luna5ama</groupId>
+  <artifactId>gl-wrapper-lwjgl-3</artifactId>
+  <versioning>
+    <latest>1.0-SNAPSHOT</latest>
+    <versions>
+      <version>1.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20230704195018</lastUpdated>
+  </versioning>
+</metadata>
