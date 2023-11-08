@@ -1,0 +1,128 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "dev.fastmc",
+    "module": "mod-loader-plugin",
+    "version": "1.1-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.1.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "mod-loader-plugin-1.1-SNAPSHOT.jar",
+          "url": "mod-loader-plugin-1.1-SNAPSHOT.jar",
+          "size": 239440,
+          "sha512": "a6690793190cc84440994ec11f635df3df13ccf9e9e72d508d23e8b5b28134888c00e77616ecc6e5e3536431facaf20187c1272d1b69a8bdf2a9ddbd69e195af",
+          "sha256": "95a88a4d5e95688ce6f7a1f5b68cdb7790de55aac5b9f9fe59321b7618201b42",
+          "sha1": "9122351da17b01f468bae8ab190b63c7a9fd66e8",
+          "md5": "7c6b2055f3682c39077a96b2476cb8a5"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.8.22"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.7.1"
+          }
+        },
+        {
+          "group": "org.apache.commons",
+          "module": "commons-compress",
+          "version": {
+            "requires": "1.22"
+          }
+        },
+        {
+          "group": "com.google.code.gson",
+          "module": "gson",
+          "version": {
+            "requires": "2.10"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-commons",
+          "version": {
+            "requires": "9.4"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-tree",
+          "version": {
+            "requires": "9.4"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mod-loader-plugin-1.1-SNAPSHOT.jar",
+          "url": "mod-loader-plugin-1.1-SNAPSHOT.jar",
+          "size": 239440,
+          "sha512": "a6690793190cc84440994ec11f635df3df13ccf9e9e72d508d23e8b5b28134888c00e77616ecc6e5e3536431facaf20187c1272d1b69a8bdf2a9ddbd69e195af",
+          "sha256": "95a88a4d5e95688ce6f7a1f5b68cdb7790de55aac5b9f9fe59321b7618201b42",
+          "sha1": "9122351da17b01f468bae8ab190b63c7a9fd66e8",
+          "md5": "7c6b2055f3682c39077a96b2476cb8a5"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "mod-loader-plugin-1.1-SNAPSHOT-sources.jar",
+          "url": "mod-loader-plugin-1.1-SNAPSHOT-sources.jar",
+          "size": 151307,
+          "sha512": "9e564ae707ac2714057155ba3b60187d03b21d60518179f6dbb25d1f8a45be991fb6d803d9d3f035e30b85420b7693b28067986b9a4b6b4adc92ab2ec8372b99",
+          "sha256": "6e14cd114f6c0efc7ab10d2c9cdfe10740f47f8b52014dfbc87f12307836b6a2",
+          "sha1": "dd7e31891c92bc103a7be40283ef60bcf68ba020",
+          "md5": "3485b40233cfe3b20a3d956434117ab9"
+        }
+      ]
+    }
+  ]
+}

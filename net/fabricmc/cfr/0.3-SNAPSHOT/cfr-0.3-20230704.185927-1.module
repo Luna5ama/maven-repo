@@ -1,0 +1,89 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "net.fabricmc",
+    "module": "cfr",
+    "version": "0.3-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.1.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "cfr-0.3-SNAPSHOT.jar",
+          "url": "cfr-0.3-SNAPSHOT.jar",
+          "size": 2058257,
+          "sha512": "f18e4a402f3c92f0c295f7cba560042aafafda284bc637cefe097216b454bf3d1ec47a3e53fb4feff19ad8fa28056a590f971482814f8c2e7c1f9ade960a74c2",
+          "sha256": "6e1cf1953bd70401e3d0911307cd50d4224edab68ab53eadf8937d460e5752c4",
+          "sha1": "692207074bd1ef18dddfc3e03dfe1ce9394007a7",
+          "md5": "fc07d87fb259246ea0f4b35ef9394e53"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "it.unimi.dsi",
+          "module": "fastutil",
+          "version": {
+            "requires": "8.5.11"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "cfr-0.3-SNAPSHOT.jar",
+          "url": "cfr-0.3-SNAPSHOT.jar",
+          "size": 2058257,
+          "sha512": "f18e4a402f3c92f0c295f7cba560042aafafda284bc637cefe097216b454bf3d1ec47a3e53fb4feff19ad8fa28056a590f971482814f8c2e7c1f9ade960a74c2",
+          "sha256": "6e1cf1953bd70401e3d0911307cd50d4224edab68ab53eadf8937d460e5752c4",
+          "sha1": "692207074bd1ef18dddfc3e03dfe1ce9394007a7",
+          "md5": "fc07d87fb259246ea0f4b35ef9394e53"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "cfr-0.3-SNAPSHOT-sources.jar",
+          "url": "cfr-0.3-SNAPSHOT-sources.jar",
+          "size": 1021048,
+          "sha512": "156aea1e089d64f7ad613a47308b5497d08667750d4598401ce4fb9d90ee89cabb9d9e1fa3c6bb08bbd6fbefdd820d0ff94aa7511ec85ecc45587e2e94e78d00",
+          "sha256": "5929324725eab176c3c6c02bf578b5ab9428b2957207957cdbd1a8982e20db38",
+          "sha1": "3e15db132e82a95cb9cfa7fbd7a724b0a17cd25f",
+          "md5": "2c1fe8526ca8e01896c5fadd11a53893"
+        }
+      ]
+    }
+  ]
+}

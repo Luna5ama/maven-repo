@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>dev.fastmc.fast-remapper</groupId>
+  <artifactId>dev.fastmc.fast-remapper.gradle.plugin</artifactId>
+  <version>1.1-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20230704.185548</timestamp>
+      <buildNumber>5</buildNumber>
+    </snapshot>
+    <lastUpdated>20230704185548</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.1-20230704.185548-5</value>
+        <updated>20230704185548</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>

@@ -1,0 +1,135 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "dev.fastmc",
+    "module": "fast-remapper",
+    "version": "1.1-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.1.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "fast-remapper-1.1-SNAPSHOT.jar",
+          "url": "fast-remapper-1.1-SNAPSHOT.jar",
+          "size": 344808,
+          "sha512": "7e5aea502d3a41152274b2e224bb953c5ff316f7adb8c3291856dcef014f541853224d65fa0c48000edc23a442e49553e1b0315b8b7d1613afcd5e5b3588b017",
+          "sha256": "ae733938d637a8673267ab89121a9b03f4d741734553a5a891a5aec7027c7785",
+          "sha1": "8aa623427dc8111804b5cda0ca241b88dc85eeb5",
+          "md5": "e8ecdeea0014f516091e0f614d27fa8c"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.8.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.6.4"
+          }
+        },
+        {
+          "group": "com.google.code.gson",
+          "module": "gson",
+          "version": {
+            "requires": "2.10"
+          }
+        },
+        {
+          "group": "it.unimi.dsi",
+          "module": "fastutil",
+          "version": {
+            "requires": "8.5.11"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-commons",
+          "version": {
+            "requires": "9.4"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-tree",
+          "version": {
+            "requires": "9.4"
+          }
+        },
+        {
+          "group": "dev.fastmc",
+          "module": "ow2-asm-ktdsl",
+          "version": {
+            "requires": "1.0-SNAPSHOT"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "fast-remapper-1.1-SNAPSHOT.jar",
+          "url": "fast-remapper-1.1-SNAPSHOT.jar",
+          "size": 344808,
+          "sha512": "7e5aea502d3a41152274b2e224bb953c5ff316f7adb8c3291856dcef014f541853224d65fa0c48000edc23a442e49553e1b0315b8b7d1613afcd5e5b3588b017",
+          "sha256": "ae733938d637a8673267ab89121a9b03f4d741734553a5a891a5aec7027c7785",
+          "sha1": "8aa623427dc8111804b5cda0ca241b88dc85eeb5",
+          "md5": "e8ecdeea0014f516091e0f614d27fa8c"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "fast-remapper-1.1-SNAPSHOT-sources.jar",
+          "url": "fast-remapper-1.1-SNAPSHOT-sources.jar",
+          "size": 31308,
+          "sha512": "73f541aea2c8550649f856c7aa0a494af5e53c2e3efe66fb5d03b9394e1d10712265c586c74b01d58d621b07e303d0389942744fe996bc0dab8dbd062ce21c0f",
+          "sha256": "0786b03c3c51e4ba83324689381dc6a7c1a5e1a6e9f9eef101444ce19e1e9d0d",
+          "sha1": "9cad0276ec445ccdd623f6c58c914231454dbb2d",
+          "md5": "481240c071136ffc4685e6266854895f"
+        }
+      ]
+    }
+  ]
+}

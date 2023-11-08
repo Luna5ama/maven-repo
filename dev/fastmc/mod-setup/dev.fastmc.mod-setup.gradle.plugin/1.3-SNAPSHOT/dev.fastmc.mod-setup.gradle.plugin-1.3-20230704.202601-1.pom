@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>dev.fastmc.mod-setup</groupId>
+  <artifactId>dev.fastmc.mod-setup.gradle.plugin</artifactId>
+  <version>1.3-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>Mod Setup</name>
+  <description>Gradle plugin for setting up Minecraft mod project</description>
+  <dependencies>
+    <dependency>
+      <groupId>dev.fastmc</groupId>
+      <artifactId>mod-setup</artifactId>
+      <version>1.3-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+</project>

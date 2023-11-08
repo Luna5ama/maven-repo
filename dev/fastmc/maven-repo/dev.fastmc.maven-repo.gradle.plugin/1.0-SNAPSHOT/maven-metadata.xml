@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>dev.fastmc.maven-repo</groupId>
+  <artifactId>dev.fastmc.maven-repo.gradle.plugin</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20221221.141612</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20221221141612</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.0-20221221.141612-1</value>
+        <updated>20221221141612</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
