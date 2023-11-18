@@ -1,0 +1,137 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "dev.fastmc",
+    "module": "ow2-asm-ktdsl",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-commons",
+          "version": {
+            "requires": "9.4"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-tree",
+          "version": {
+            "requires": "9.4"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ow2-asm-ktdsl-1.0.0.jar",
+          "url": "ow2-asm-ktdsl-1.0.0.jar",
+          "size": 8799,
+          "sha512": "afd324d445636d852a197815af55309090bac4ba4c88de6ad0471db7f5aa0ba0fd7955d33a8c4f9b9be1717ffabed00f72201a2b8cddc4e553d4359639fe4e63",
+          "sha256": "d3b6b855ead74e2b0986771c5afc9e80c1b00fecbcb74b0b351cf3b7190bcecc",
+          "sha1": "169d77689f94dafb3127f2e56c2aa9c0d2cc3305",
+          "md5": "4740f9736625bcfb1a2e26f2bc44a13f"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-reflect",
+          "version": {
+            "requires": "1.9.20"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-commons",
+          "version": {
+            "requires": "9.4"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-tree",
+          "version": {
+            "requires": "9.4"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ow2-asm-ktdsl-1.0.0.jar",
+          "url": "ow2-asm-ktdsl-1.0.0.jar",
+          "size": 8799,
+          "sha512": "afd324d445636d852a197815af55309090bac4ba4c88de6ad0471db7f5aa0ba0fd7955d33a8c4f9b9be1717ffabed00f72201a2b8cddc4e553d4359639fe4e63",
+          "sha256": "d3b6b855ead74e2b0986771c5afc9e80c1b00fecbcb74b0b351cf3b7190bcecc",
+          "sha1": "169d77689f94dafb3127f2e56c2aa9c0d2cc3305",
+          "md5": "4740f9736625bcfb1a2e26f2bc44a13f"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ow2-asm-ktdsl-1.0.0-sources.jar",
+          "url": "ow2-asm-ktdsl-1.0.0-sources.jar",
+          "size": 1651,
+          "sha512": "fe92074adb0a7909702e29044b72339d2290b8ce28d53ad847900820b728054a43ac43d6a3782045160ac936c4a81fcdaa2f02eced1c5b33b61a63d6ef97f22e",
+          "sha256": "846080153ab234ae91399765b54c2ed1d026e8043d2c2fe2eb535c6ea53b92ec",
+          "sha1": "81434caabd515382d413f30813837a5232256712",
+          "md5": "b6ecbd5aa68b5102be7842e788b1be53"
+        }
+      ]
+    }
+  ]
+}
