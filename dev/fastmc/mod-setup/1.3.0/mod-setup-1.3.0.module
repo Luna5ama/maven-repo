@@ -1,0 +1,142 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "dev.fastmc",
+    "module": "mod-setup",
+    "version": "1.3.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "mod-setup-1.3.0.jar",
+          "url": "mod-setup-1.3.0.jar",
+          "size": 77783,
+          "sha512": "01564a9f6cb9b48610f86bc4362a1b42061c257c18704de0076c85533a3de16264c7445ee516a9dea3bee3406f5598ca79edf46769116bd8562812320acc208e",
+          "sha256": "615c8e46a8237add57e8443ba0266d95109344ed18e8727a7d326cb8b3dfe260",
+          "sha1": "ab5354bca1fb350009d9854f7e907efb80955b1f",
+          "md5": "2ba56a239e8f104bc94444b9e1e3a704"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-gradle-plugin",
+          "version": {
+            "requires": "1.9.20"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.9.20"
+          }
+        },
+        {
+          "group": "dev.luna5ama",
+          "module": "jar-optimizer",
+          "version": {
+            "requires": "1.2.0"
+          }
+        },
+        {
+          "group": "dev.fastmc",
+          "module": "fast-remapper",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "dev.fastmc",
+          "module": "mod-loader-plugin",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "architectury-plugin",
+          "module": "architectury-plugin.gradle.plugin",
+          "version": {
+            "requires": "3.4-SNAPSHOT"
+          }
+        },
+        {
+          "group": "dev.architectury.loom",
+          "module": "dev.architectury.loom.gradle.plugin",
+          "version": {
+            "requires": "1.2-SNAPSHOT"
+          }
+        },
+        {
+          "group": "net.minecraftforge.gradle",
+          "module": "ForgeGradle",
+          "version": {
+            "requires": "6.0.16"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "mod-setup-1.3.0.jar",
+          "url": "mod-setup-1.3.0.jar",
+          "size": 77783,
+          "sha512": "01564a9f6cb9b48610f86bc4362a1b42061c257c18704de0076c85533a3de16264c7445ee516a9dea3bee3406f5598ca79edf46769116bd8562812320acc208e",
+          "sha256": "615c8e46a8237add57e8443ba0266d95109344ed18e8727a7d326cb8b3dfe260",
+          "sha1": "ab5354bca1fb350009d9854f7e907efb80955b1f",
+          "md5": "2ba56a239e8f104bc94444b9e1e3a704"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "mod-setup-1.3.0-sources.jar",
+          "url": "mod-setup-1.3.0-sources.jar",
+          "size": 15996,
+          "sha512": "5c62da097f235cc5bfddebe0b5b9ace631ff6924b5e25cab410cc8c9103a4691463ecb4f13bbbdbbac954b468dc423333bb84c650990b707498087e91e48de7c",
+          "sha256": "4369d199312afd123bc5acf706ca50f262e9dc08ffe17b7bc1c4287146bf6682",
+          "sha1": "2471a0462be9264d3ad4660238cf454a51cdf6d5",
+          "md5": "abcf4132e5b7f262374bd34f5d93e816"
+        }
+      ]
+    }
+  ]
+}
