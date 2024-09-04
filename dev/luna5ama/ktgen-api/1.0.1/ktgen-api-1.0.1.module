@@ -1,0 +1,123 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "dev.luna5ama",
+    "module": "ktgen-api",
+    "version": "1.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.squareup",
+          "module": "kotlinpoet",
+          "version": {
+            "requires": "1.16.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ktgen-api-1.0.1.jar",
+          "url": "ktgen-api-1.0.1.jar",
+          "size": 1339,
+          "sha512": "df096e4e765d46f30aab936cc987e36f900be0be50ddd40b51a45313fb74265b1ced311a0f37ef7176dc95d6405d613d1d170be456c640a46b3f9249cf652507",
+          "sha256": "720631b43d3bf655eaa8c212b9820a239b94a83c038f2f2f0fd74cb18f294dea",
+          "sha1": "c0a4ffa288e547ceec1d9c3de01a19fc7b5b813c",
+          "md5": "4180c5570647d4d11f6870e821f8d055"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-gradle-plugin",
+          "version": {
+            "requires": "2.0.20"
+          }
+        },
+        {
+          "group": "com.squareup",
+          "module": "kotlinpoet",
+          "version": {
+            "requires": "1.16.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ktgen-api-1.0.1.jar",
+          "url": "ktgen-api-1.0.1.jar",
+          "size": 1339,
+          "sha512": "df096e4e765d46f30aab936cc987e36f900be0be50ddd40b51a45313fb74265b1ced311a0f37ef7176dc95d6405d613d1d170be456c640a46b3f9249cf652507",
+          "sha256": "720631b43d3bf655eaa8c212b9820a239b94a83c038f2f2f0fd74cb18f294dea",
+          "sha1": "c0a4ffa288e547ceec1d9c3de01a19fc7b5b813c",
+          "md5": "4180c5570647d4d11f6870e821f8d055"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ktgen-api-1.0.1-sources.jar",
+          "url": "ktgen-api-1.0.1-sources.jar",
+          "size": 837,
+          "sha512": "05ed00af4e6ff7a2f11f6987702e87c4e7b1a8088fd5cd5e7537a3cbc2f45ba6d1a8e37ffc3344e3f29f1301315349c53e7aa5e93662c45293fae6e7b4d962c3",
+          "sha256": "3f9642e17e666b1666532c8b38a4e1f37b820f536a199481ad19af483e68ae8e",
+          "sha1": "7810482c27a6f6e19e74182b4f7361c3992b7830",
+          "md5": "8422e52795020fcd2f4825def6c64644"
+        }
+      ]
+    }
+  ]
+}
