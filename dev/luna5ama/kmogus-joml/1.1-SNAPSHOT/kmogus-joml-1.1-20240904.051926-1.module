@@ -1,0 +1,123 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "dev.luna5ama",
+    "module": "kmogus-joml",
+    "version": "1.1-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "dev.luna5ama",
+          "module": "kmogus-core",
+          "version": {
+            "requires": "1.1-SNAPSHOT"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kmogus-joml-1.1-SNAPSHOT.jar",
+          "url": "kmogus-joml-1.1-SNAPSHOT.jar",
+          "size": 70886,
+          "sha512": "984cea80a4f387bd3f26f1c1d549ea113cb905b88fdad0c72ff6564d649b87ef407c173f344b6ca9952f05e701f0f86a5cf5c5aab66cfc56d32730caa5238695",
+          "sha256": "a7f6dcc2bac358362eba308c723bc9b568766d76ad1e1d8d40a4b011a3453302",
+          "sha1": "974706c4a640508cd188bed668fceb0acc9509cc",
+          "md5": "5e6c092840a7c83afbf51af3f88862ae"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.joml",
+          "module": "joml",
+          "version": {
+            "requires": "1.10.5"
+          }
+        },
+        {
+          "group": "dev.luna5ama",
+          "module": "kmogus-core",
+          "version": {
+            "requires": "1.1-SNAPSHOT"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kmogus-joml-1.1-SNAPSHOT.jar",
+          "url": "kmogus-joml-1.1-SNAPSHOT.jar",
+          "size": 70886,
+          "sha512": "984cea80a4f387bd3f26f1c1d549ea113cb905b88fdad0c72ff6564d649b87ef407c173f344b6ca9952f05e701f0f86a5cf5c5aab66cfc56d32730caa5238695",
+          "sha256": "a7f6dcc2bac358362eba308c723bc9b568766d76ad1e1d8d40a4b011a3453302",
+          "sha1": "974706c4a640508cd188bed668fceb0acc9509cc",
+          "md5": "5e6c092840a7c83afbf51af3f88862ae"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "kmogus-joml-1.1-SNAPSHOT-sources.jar",
+          "url": "kmogus-joml-1.1-SNAPSHOT-sources.jar",
+          "size": 5814,
+          "sha512": "f42463a8ce384db3f7174ba9bda4043cc42d83fe984483969dcd1b6f6423c536a7f54c8a7ff4552447bc0b98940e7ed6d26503ea0340f155cd1bf162fd4f5083",
+          "sha256": "055f9ba1efcc8f113d0da1be41fecfdc3747347862c9b8f66c16241c04e22890",
+          "sha1": "5aa629e7ebb46bb287c3948ddd36f4f94a6fc68b",
+          "md5": "8c28d5e2a7f10bebc20da95bc6a393e2"
+        }
+      ]
+    }
+  ]
+}

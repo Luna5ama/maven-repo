@@ -1,0 +1,116 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "dev.luna5ama",
+    "module": "kmogus-struct-api",
+    "version": "1.1-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "dev.luna5ama",
+          "module": "kmogus-core",
+          "version": {
+            "requires": "1.1-SNAPSHOT"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kmogus-struct-api-1.1-SNAPSHOT.jar",
+          "url": "kmogus-struct-api-1.1-SNAPSHOT.jar",
+          "size": 2874,
+          "sha512": "41d44d69feef0938b83ce00dfe66777debaa291aaeef413ecc9dcba4fd041e040e9fa73f74228ded072ba4b1fe2ad2925fa89ff0ef418bf19070179f38655fac",
+          "sha256": "4cfea25f37a2a40ad76cb751df1ed3f710f2da0c836de75e79b668b28db9d4d5",
+          "sha1": "f05a60db8e359925e02cbed30b7d628809c614ce",
+          "md5": "9219ac4c81dc8f561cc404efa831a58d"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "dev.luna5ama",
+          "module": "kmogus-core",
+          "version": {
+            "requires": "1.1-SNAPSHOT"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kmogus-struct-api-1.1-SNAPSHOT.jar",
+          "url": "kmogus-struct-api-1.1-SNAPSHOT.jar",
+          "size": 2874,
+          "sha512": "41d44d69feef0938b83ce00dfe66777debaa291aaeef413ecc9dcba4fd041e040e9fa73f74228ded072ba4b1fe2ad2925fa89ff0ef418bf19070179f38655fac",
+          "sha256": "4cfea25f37a2a40ad76cb751df1ed3f710f2da0c836de75e79b668b28db9d4d5",
+          "sha1": "f05a60db8e359925e02cbed30b7d628809c614ce",
+          "md5": "9219ac4c81dc8f561cc404efa831a58d"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "kmogus-struct-api-1.1-SNAPSHOT-sources.jar",
+          "url": "kmogus-struct-api-1.1-SNAPSHOT-sources.jar",
+          "size": 1041,
+          "sha512": "4ac5ed0e25121d2af2fcf3512354836beb8bb6e0fc39cfc9d162a221d1213eee2a86286bd9c38ad28ae8160ca1a8d597063c9c376f69b4933c80591d51d9be5a",
+          "sha256": "b512eb1620c2188a809f17388cba6298d42bf7124eca8724b5de41d1082f545e",
+          "sha1": "bf8c0fa4d39294179c137048692da91d9d41eac2",
+          "md5": "b8de781f0cdefaae7fb73f4d2af9b349"
+        }
+      ]
+    }
+  ]
+}
