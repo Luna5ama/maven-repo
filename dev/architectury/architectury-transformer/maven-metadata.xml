@@ -3,11 +3,12 @@
   <groupId>dev.architectury</groupId>
   <artifactId>architectury-transformer</artifactId>
   <versioning>
-    <latest>5.2.9999</latest>
+    <latest>5.2.9999-SNAPSHOT</latest>
     <release>5.2.9999</release>
     <versions>
       <version>5.2.9999</version>
+      <version>5.2.9999-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20230704190006</lastUpdated>
+    <lastUpdated>20240920071053</lastUpdated>
   </versioning>
 </metadata>
