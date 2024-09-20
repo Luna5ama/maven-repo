@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>dev.architectury.loom</groupId>
+  <artifactId>dev.architectury.loom.gradle.plugin</artifactId>
+  <versioning>
+    <lastUpdated>20240920071709</lastUpdated>
+    <snapshot>
+      <timestamp>20240920.071709</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.7-20240920.071709-1</value>
+        <updated>20240920071709</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+  <version>1.7-SNAPSHOT</version>
+</metadata>
