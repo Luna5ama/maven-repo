@@ -1,0 +1,115 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "dev.luna5ama",
+    "module": "gl-wrapper-base",
+    "version": "1.1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "dev.luna5ama",
+          "module": "kmogus-core",
+          "version": {
+            "requires": "1.1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "gl-wrapper-base-1.1.0.jar",
+          "url": "gl-wrapper-base-1.1.0.jar",
+          "size": 796220,
+          "sha512": "c322bcf9d96753516695da2d6b6b34e973367a3a95c9cf6b2c92d672001a811743e20d72d116e3300a004b7c34d2380d88bd3c0ac14bc0b281e6f612e93f1d80",
+          "sha256": "a2301b11f0ff322a3b603fc69c0010e9bea4d32ecdac2590764296fd4eb59b80",
+          "sha1": "e7eacb72f06c6e7e126b3ae1ae76da43c65f0ca6",
+          "md5": "531ea2f4b18d4a7d653cfc9c7cea0079"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8"
+        },
+        {
+          "group": "dev.luna5ama",
+          "module": "kmogus-core",
+          "version": {
+            "requires": "1.1.0"
+          }
+        }
+      ],
+      "dependencyConstraints": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "2.2.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "gl-wrapper-base-1.1.0.jar",
+          "url": "gl-wrapper-base-1.1.0.jar",
+          "size": 796220,
+          "sha512": "c322bcf9d96753516695da2d6b6b34e973367a3a95c9cf6b2c92d672001a811743e20d72d116e3300a004b7c34d2380d88bd3c0ac14bc0b281e6f612e93f1d80",
+          "sha256": "a2301b11f0ff322a3b603fc69c0010e9bea4d32ecdac2590764296fd4eb59b80",
+          "sha1": "e7eacb72f06c6e7e126b3ae1ae76da43c65f0ca6",
+          "md5": "531ea2f4b18d4a7d653cfc9c7cea0079"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "gl-wrapper-base-1.1.0-sources.jar",
+          "url": "gl-wrapper-base-1.1.0-sources.jar",
+          "size": 188124,
+          "sha512": "81484f3a84504524511f7cb30b9c764d68c2dbab00e2de4a296a6db4b9a80c52bad988ed8fd959549edf0dc153f87ec4751567b1c77c1bd40ebf19667d3f1b9c",
+          "sha256": "08f8531c02e352dcfe77cb7a76f1722e49e3dcf8cfacea2d8a4e7f9826975e6b",
+          "sha1": "8c47f909e4ece233ee3d6b6f9799500ac0ccd9a1",
+          "md5": "b3f05f5e71366acd14deb582f687d647"
+        }
+      ]
+    }
+  ]
+}

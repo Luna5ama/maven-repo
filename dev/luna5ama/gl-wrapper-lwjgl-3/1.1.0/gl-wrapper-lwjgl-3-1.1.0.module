@@ -1,0 +1,115 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "dev.luna5ama",
+    "module": "gl-wrapper-lwjgl-3",
+    "version": "1.1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "dev.luna5ama",
+          "module": "gl-wrapper-base",
+          "version": {
+            "requires": "1.1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "gl-wrapper-lwjgl-3-1.1.0.jar",
+          "url": "gl-wrapper-lwjgl-3-1.1.0.jar",
+          "size": 618465,
+          "sha512": "66be1816902a71257a442e91d407ab2f2dec1b7fcea26fe4b6cf491d4772d3c39680e49fe1dae0789898aa8f2f052ad75997e9deb2adee82831513a06352ebb8",
+          "sha256": "3597e69e28b3f311f5cb81435f90053146ae6014068551c5431abb0b050755c8",
+          "sha1": "0421f36b9180b8af40d13773d7cc9fc5bbcac124",
+          "md5": "7df8d873c4232734ede155be1a5c351e"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8"
+        },
+        {
+          "group": "dev.luna5ama",
+          "module": "gl-wrapper-base",
+          "version": {
+            "requires": "1.1.0"
+          }
+        }
+      ],
+      "dependencyConstraints": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "2.2.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "gl-wrapper-lwjgl-3-1.1.0.jar",
+          "url": "gl-wrapper-lwjgl-3-1.1.0.jar",
+          "size": 618465,
+          "sha512": "66be1816902a71257a442e91d407ab2f2dec1b7fcea26fe4b6cf491d4772d3c39680e49fe1dae0789898aa8f2f052ad75997e9deb2adee82831513a06352ebb8",
+          "sha256": "3597e69e28b3f311f5cb81435f90053146ae6014068551c5431abb0b050755c8",
+          "sha1": "0421f36b9180b8af40d13773d7cc9fc5bbcac124",
+          "md5": "7df8d873c4232734ede155be1a5c351e"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "gl-wrapper-lwjgl-3-1.1.0-sources.jar",
+          "url": "gl-wrapper-lwjgl-3-1.1.0-sources.jar",
+          "size": 127086,
+          "sha512": "d15db23f0f764e9178fab24faf8f5fa01113929f474baa39a6aedea7d54d27b22315af08cd51f87d31174df72b1c79ce8eaaefb2ae39d68824e0fd9fffee84be",
+          "sha256": "a2e6d1e5d8a1c88b52dd9350477e97144510e6af0d71cfa38f666a486accd622",
+          "sha1": "a0ca1a6f30414a82bc95270143c41cbc0a93f36b",
+          "md5": "490542ca192293ec3d3c2c5ee89543d4"
+        }
+      ]
+    }
+  ]
+}
